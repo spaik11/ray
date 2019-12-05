@@ -26,9 +26,8 @@ const Ray = () => {
 
     shift: function() {
       const firstItem = this[0];
-      delete this[0];
-      for (let i = 0; i < this.length; i++) {
-        this[i] = this[i - 1]
+      for (let i = 0; i < this.length - 1; i++) {
+        this[i] = this[i + 1]
       }
 
       delete this[this.length - 1];
